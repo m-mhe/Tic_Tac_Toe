@@ -1762,7 +1762,7 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               },
               child: const Text(
                 'Player VS Player',
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 14),
               ),
             ),
             const Divider(),
@@ -1770,7 +1770,7 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               onPressed: () {},
               child: const Text(
                 'About',
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 14),
               ),
             ),
             const Divider(),

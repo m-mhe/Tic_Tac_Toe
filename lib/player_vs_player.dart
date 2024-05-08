@@ -20,7 +20,6 @@ class PlayerVsPlayer extends StatefulWidget {
 }
 
 class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
-
   bool isItO = false;
   String imageForI = 'img/solid.png';
   String imageForII = 'img/solid.png';
@@ -114,9 +113,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -149,9 +150,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -184,9 +187,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -219,9 +224,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -254,9 +261,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -289,9 +298,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -324,9 +335,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -359,9 +372,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -394,9 +409,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -429,9 +446,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -464,9 +483,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -499,9 +520,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -534,9 +557,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -569,9 +594,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -604,9 +631,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -639,9 +668,11 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -660,36 +691,60 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('Player VS Player')
-      ),
+      appBar: AppBar(title: const Text('Player VS Player')),
       endDrawer: Drawer(
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
-        ),
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))),
         child: ListView(
-          children:  [
+          children: [
             const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.white,
               ),
               child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  '×',
-                  style: TextStyle(fontSize: 37, color: Color(0xff6D77FB)),
-                ),
-                Icon(Icons.circle_outlined, color: Color(0xff6D77FB),),
-                Icon(Icons.crop_square_sharp, color: Color(0xff6D77FB),)
-              ],
-            ),),
-            TextButton(onPressed: (){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-              return PlayerVsAI();
-            },),);}, child: const Text('Player VS AI', style: TextStyle(fontSize: 16),),),
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    '×',
+                    style: TextStyle(fontSize: 37, color: Color(0xff6D77FB)),
+                  ),
+                  Icon(
+                    Icons.circle_outlined,
+                    color: Color(0xff6D77FB),
+                  ),
+                  Icon(
+                    Icons.crop_square_sharp,
+                    color: Color(0xff6D77FB),
+                  )
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return PlayerVsAI();
+                    },
+                  ),
+                );
+              },
+              child: const Text(
+                'Player VS AI',
+                style: TextStyle(fontSize: 14),
+              ),
+            ),
             const Divider(),
-            TextButton(onPressed: (){}, child: const Text('About', style: TextStyle(fontSize: 16),),),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'About',
+                style: TextStyle(fontSize: 14),
+              ),
+            ),
             const Divider(),
           ],
         ),
@@ -703,15 +758,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForI == 'img/solid.png') {
-                    setState(() {
-                      imageForI = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForI = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForI == 'img/solid.png') {
-                    setState(() {
-                      imageForI = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForI = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -725,7 +784,7 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                 ),
               ),
               SizedBox(
-                width: 10,
+                width: 7,
                 height: MediaQuery.sizeOf(context).width / 4,
                 child: const ColoredBox(
                   color: Color(0xff6D77FB),
@@ -734,15 +793,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForII == 'img/solid.png') {
-                    setState(() {
-                      imageForII = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForII = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForII == 'img/solid.png') {
-                    setState(() {
-                      imageForII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForII = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -756,7 +819,7 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                 ),
               ),
               SizedBox(
-                width: 10,
+                width: 7,
                 height: MediaQuery.sizeOf(context).width / 4,
                 child: const ColoredBox(
                   color: Color(0xff6D77FB),
@@ -765,15 +828,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForIII == 'img/solid.png') {
-                    setState(() {
-                      imageForIII = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForIII = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForIII == 'img/solid.png') {
-                    setState(() {
-                      imageForIII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForIII = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -789,8 +856,8 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
             ],
           ),
           SizedBox(
-            height: 10,
-            width: MediaQuery.sizeOf(context).width / 1.247,
+            height: 7,
+            width: MediaQuery.sizeOf(context).width / 1.27,
             child: const ColoredBox(
               color: Color(0xff6D77FB),
             ),
@@ -801,15 +868,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForIV == 'img/solid.png') {
-                    setState(() {
-                      imageForIV = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForIV = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForIV == 'img/solid.png') {
-                    setState(() {
-                      imageForIV = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForIV = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -823,7 +894,7 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                 ),
               ),
               SizedBox(
-                width: 10,
+                width: 7,
                 height: MediaQuery.sizeOf(context).width / 4,
                 child: const ColoredBox(
                   color: Color(0xff6D77FB),
@@ -832,15 +903,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForV == 'img/solid.png') {
-                    setState(() {
-                      imageForV = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForV = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForV == 'img/solid.png') {
-                    setState(() {
-                      imageForV = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForV = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -854,7 +929,7 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                 ),
               ),
               SizedBox(
-                width: 10,
+                width: 7,
                 height: MediaQuery.sizeOf(context).width / 4,
                 child: const ColoredBox(
                   color: Color(0xff6D77FB),
@@ -863,15 +938,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForVI == 'img/solid.png') {
-                    setState(() {
-                      imageForVI = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForVI = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForVI == 'img/solid.png') {
-                    setState(() {
-                      imageForVI = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForVI = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -887,8 +966,8 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
             ],
           ),
           SizedBox(
-            height: 10,
-            width: MediaQuery.sizeOf(context).width / 1.247,
+            height: 7,
+            width: MediaQuery.sizeOf(context).width / 1.27,
             child: const ColoredBox(
               color: Color(0xff6D77FB),
             ),
@@ -899,15 +978,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForVII == 'img/solid.png') {
-                    setState(() {
-                      imageForVII = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForVII = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForVII == 'img/solid.png') {
-                    setState(() {
-                      imageForVII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForVII = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -921,7 +1004,7 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                 ),
               ),
               SizedBox(
-                width: 10,
+                width: 7,
                 height: MediaQuery.sizeOf(context).width / 4,
                 child: const ColoredBox(
                   color: Color(0xff6D77FB),
@@ -930,15 +1013,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForVIII == 'img/solid.png') {
-                    setState(() {
-                      imageForVIII = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForVIII = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForVIII == 'img/solid.png') {
-                    setState(() {
-                      imageForVIII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForVIII = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -952,7 +1039,7 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
                 ),
               ),
               SizedBox(
-                width: 10,
+                width: 7,
                 height: MediaQuery.sizeOf(context).width / 4,
                 child: const ColoredBox(
                   color: Color(0xff6D77FB),
@@ -961,15 +1048,19 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForIX == 'img/solid.png') {
-                    setState(() {
-                      imageForIX = 'img/x.png';
-                      isItO = true;
-                    },);
+                    setState(
+                      () {
+                        imageForIX = 'img/x.png';
+                        isItO = true;
+                      },
+                    );
                   } else if (imageForIX == 'img/solid.png') {
-                    setState(() {
-                      imageForIX = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForIX = 'img/0.png';
+                        isItO = false;
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -992,14 +1083,18 @@ class _PlayerVsPlayerState extends State<PlayerVsPlayer> {
             clean();
           });
         },
-        child: const Icon(Icons.restart_alt_rounded,),
+        child: const Icon(
+          Icons.restart_alt_rounded,
+        ),
       ),
     );
   }
+
   @override
   void deactivate() {
     super.deactivate();
   }
+
   @override
   void dispose() {
     super.dispose();

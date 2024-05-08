@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/home.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
@@ -16,24 +16,22 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           foregroundColor: Colors.white,
-              backgroundColor: Color(0xff6D77FB),
+          backgroundColor: Color(0xff6D77FB),
         ),
         drawerTheme: DrawerThemeData(
           backgroundColor: const Color(0xff6D77FB),
-          width: MediaQuery.sizeOf(context).width/1.5,
+          width: MediaQuery.sizeOf(context).width / 1.5,
         ),
         textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: Color(0xff6D77FB),
-          )
-        ),
+            style: TextButton.styleFrom(
+          foregroundColor: Colors.white,
+          backgroundColor: Color(0xff6D77FB),
+        )),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: const Color(0xff6D77FB),
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10)
-          ),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
       ),
       title: 'Tic Tac Toe',
