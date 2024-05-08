@@ -9,7 +9,6 @@ class PlayerVsAI extends StatefulWidget {
 }
 
 class _PlayerVsAIState extends State<PlayerVsAI> {
-
   bool isItO = false;
 
   String imageForI = 'img/solid.png';
@@ -23,6 +22,1042 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
   String imageForVII = 'img/solid.png';
   String imageForVIII = 'img/solid.png';
   String imageForIX = 'img/solid.png';
+
+  void miniMax(
+      {int? bestMove,
+      required int turn,
+      required String imageI,
+      required String imageII,
+      required String imageIII,
+      required String imageIV,
+      required String imageV,
+      required String imageVI,
+      required String imageVII,
+      required String imageVIII,
+      required String imageIX}) {
+    int isAiTurn = turn;
+
+    String imgI;
+    String imgII;
+    String imgIII;
+    String imgIV;
+    String imgV;
+    String imgVI;
+    String imgVII;
+    String imgVIII;
+    String imgIX;
+
+    int score;
+
+    List<String> emptySlot = [];
+
+    if (imageI == imageII && imageIII == imageII && imageIII == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageI == imageII &&
+        imageIII == imageII &&
+        imageIII == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else if (imageI == imageV &&
+        imageIX == imageV &&
+        imageIX == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageI == imageV &&
+        imageIX == imageV &&
+        imageIX == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else if (imageIII == imageV &&
+        imageVII == imageV &&
+        imageVII == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageIII == imageV &&
+        imageVII == imageV &&
+        imageVII == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else if (imageIV == imageV &&
+        imageVI == imageV &&
+        imageVI == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageIV == imageV &&
+        imageVI == imageV &&
+        imageVI == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else if (imageVII == imageVIII &&
+        imageIX == imageVII &&
+        imageIX == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageVII == imageVIII &&
+        imageIX == imageVII &&
+        imageIX == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else if (imageI == imageIV &&
+        imageVII == imageIV &&
+        imageVII == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageI == imageIV &&
+        imageVII == imageIV &&
+        imageVII == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else if (imageII == imageV &&
+        imageVIII == imageV &&
+        imageVIII == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageII == imageV &&
+        imageVIII == imageV &&
+        imageVIII == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else if (imageIII == imageVI &&
+        imageIX == imageVI &&
+        imageIX == 'img/x.png') {
+      score = -1;
+      isAiTurn = 1;
+      imageI = imageForI;
+      imageII = imageForII;
+      imageIII = imageForIII;
+      imageIV = imageForIV;
+      imageV = imageForV;
+      imageVI = imageForVI;
+      imageVII = imageForVII;
+      imageVIII = imageForVIII;
+      imageIX = imageForIX;
+    } else if (imageIII == imageVI &&
+        imageIX == imageVI &&
+        imageIX == 'img/0.png') {
+      score = 1;
+
+      imageI = 'img/solid.png';
+      imageII = 'img/solid.png';
+      imageIII = 'img/solid.png';
+      imageIV = 'img/solid.png';
+      imageV = 'img/solid.png';
+      imageVI = 'img/solid.png';
+      imageVII = 'img/solid.png';
+      imageVIII = 'img/solid.png';
+      imageIX = 'img/solid.png';
+
+      if (bestMove == 1) {
+        setState(() {
+          imageForI = 'img/0.png';
+        });
+      } else if (bestMove == 2) {
+        setState(() {
+          imageForII = 'img/0.png';
+        });
+      } else if (bestMove == 3) {
+        setState(() {
+          imageForIII = 'img/0.png';
+        });
+      } else if (bestMove == 4) {
+        setState(() {
+          imageForIV = 'img/0.png';
+        });
+      } else if (bestMove == 5) {
+        setState(() {
+          imageForV = 'img/0.png';
+        });
+      } else if (bestMove == 6) {
+        setState(() {
+          imageForVI = 'img/0.png';
+        });
+      } else if (bestMove == 7) {
+        setState(() {
+          imageForVII = 'img/0.png';
+        });
+      } else if (bestMove == 8) {
+        setState(() {
+          imageForVIII = 'img/0.png';
+        });
+      } else if (bestMove == 9) {
+        setState(() {
+          imageForIX = 'img/0.png';
+        });
+      }
+    } else {
+      if (imageI != 'img/solid.png' &&
+          imageII != 'img/solid.png' &&
+          imageIII != 'img/solid.png' &&
+          imageIV != 'img/solid.png' &&
+          imageV != 'img/solid.png' &&
+          imageVI != 'img/solid.png' &&
+          imageVII != 'img/solid.png' &&
+          imageVIII != 'img/solid.png' &&
+          imageIX != 'img/solid.png') {
+        score = 0;
+        isAiTurn = 1;
+        imageI = imageForI;
+        imageII = imageForII;
+        imageIII = imageForIII;
+        imageIV = imageForIV;
+        imageV = imageForV;
+        imageVI = imageForVI;
+        imageVII = imageForVII;
+        imageVIII = imageForVIII;
+        imageIX = imageForIX;
+      }
+    }
+
+    if (imageI == 'img/solid.png') {
+      emptySlot.add('1');
+      imgI = 'img/solid.png';
+    } else {
+      imgI = imageI;
+    }
+    if (imageII == 'img/solid.png') {
+      emptySlot.add('2');
+      imgII = 'img/solid.png';
+    } else {
+      imgII = imageII;
+    }
+    if (imageIII == 'img/solid.png') {
+      emptySlot.add('3');
+      imgIII = 'img/solid.png';
+    } else {
+      imgIII = imageIII;
+    }
+    if (imageIV == 'img/solid.png') {
+      emptySlot.add('4');
+      imgIV = 'img/solid.png';
+    } else {
+      imgIV = imageIV;
+    }
+    if (imageV == 'img/solid.png') {
+      emptySlot.add('5');
+      imgV = 'img/solid.png';
+    } else {
+      imgV = imageV;
+    }
+    if (imageVI == 'img/solid.png') {
+      emptySlot.add('6');
+      imgVI = 'img/solid.png';
+    } else {
+      imgVI = imageVI;
+    }
+    if (imageVII == 'img/solid.png') {
+      emptySlot.add('7');
+      imgVII = 'img/solid.png';
+    } else {
+      imgVII = imageVII;
+    }
+    if (imageVIII == 'img/solid.png') {
+      emptySlot.add('8');
+      imgVIII = 'img/solid.png';
+    } else {
+      imgVIII = imageVIII;
+    }
+    if (imageIX == 'img/solid.png') {
+      emptySlot.add('9');
+      imgIX = 'img/solid.png';
+    } else {
+      imgIX = imageIX;
+    }
+
+    if (isAiTurn % 2 != 0) {
+      if (emptySlot.first == '1') {
+        imgI = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 1;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '2') {
+        imgII = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 2;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '3') {
+        imgIII = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 3;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '4') {
+        imgIV = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 4;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '5') {
+        imgV = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 5;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '6') {
+        imgVI = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 6;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '7') {
+        imgVII = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 7;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '8') {
+        imgVIII = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 8;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      } else if (emptySlot.first == '9') {
+        imgIX = 'img/0.png';
+        isAiTurn = isAiTurn++;
+        if (isAiTurn == 1) {
+          int potentialBestMove = 9;
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX,
+              bestMove: potentialBestMove);
+        } else {
+          miniMax(
+              turn: isAiTurn,
+              imageI: imgI,
+              imageII: imgII,
+              imageIII: imgIII,
+              imageIV: imgIV,
+              imageV: imgV,
+              imageVI: imgVI,
+              imageVII: imgVII,
+              imageVIII: imgVIII,
+              imageIX: imgIX);
+        }
+      }
+    } else {
+      if (emptySlot.first == '1') {
+        imgI = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '2') {
+        imgII = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '3') {
+        imgIII = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '4') {
+        imgIV = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '5') {
+        imgV = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '6') {
+        imgVI = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '7') {
+        imgVII = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '8') {
+        imgVIII = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      } else if (emptySlot.first == '9') {
+        imgIX = 'img/x.png';
+        isAiTurn = isAiTurn++;
+        miniMax(
+            turn: isAiTurn,
+            imageI: imgI,
+            imageII: imgII,
+            imageIII: imgIII,
+            imageIV: imgIV,
+            imageV: imgV,
+            imageVI: imgVI,
+            imageVII: imgVII,
+            imageVIII: imgVIII,
+            imageIX: imgIX);
+      }
+    }
+  }
 
   void clean() {
     imageForI = 'img/solid.png';
@@ -66,7 +1101,7 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
                     setState(
-                          () {
+                      () {
                         clean();
                       },
                     );
@@ -106,9 +1141,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -141,9 +1178,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -176,9 +1215,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -211,9 +1252,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -246,9 +1289,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -281,9 +1326,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -316,9 +1363,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -351,9 +1400,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -386,9 +1437,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -421,9 +1474,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -456,9 +1511,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -491,9 +1548,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -526,9 +1585,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -561,9 +1622,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -596,9 +1659,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -631,9 +1696,11 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       backgroundColor: Colors.white,
                       foregroundColor: const Color(0xff6D77FB)),
                   onPressed: () {
-                    setState(() {
-                      clean();
-                    },);
+                    setState(
+                      () {
+                        clean();
+                      },
+                    );
                     Navigator.pop(context);
                   },
                   child: const Text(
@@ -652,15 +1719,13 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Player VS AI')
-      ),
+      appBar: AppBar(title: const Text('Player VS AI')),
       endDrawer: Drawer(
         shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))
-        ),
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))),
         child: ListView(
-          children:  [
+          children: [
             const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -673,15 +1738,41 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                     '×',
                     style: TextStyle(fontSize: 37, color: Color(0xff6D77FB)),
                   ),
-                  Icon(Icons.circle_outlined, color: Color(0xff6D77FB),),
-                  Icon(Icons.crop_square_sharp, color: Color(0xff6D77FB),)
+                  Icon(
+                    Icons.circle_outlined,
+                    color: Color(0xff6D77FB),
+                  ),
+                  Icon(
+                    Icons.crop_square_sharp,
+                    color: Color(0xff6D77FB),
+                  )
                 ],
-              ),),
-            TextButton(onPressed: (){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-              return const PlayerVsPlayer();
-            },),);}, child: const Text('Player VS Player', style: TextStyle(fontSize: 16),),),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const PlayerVsPlayer();
+                    },
+                  ),
+                );
+              },
+              child: const Text(
+                'Player VS Player',
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
             const Divider(),
-            TextButton(onPressed: (){}, child: const Text('About', style: TextStyle(fontSize: 16),),),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'About',
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
             const Divider(),
           ],
         ),
@@ -693,20 +1784,6 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
-                onTap: () {
-                  if (isItO == false && imageForI == 'img/solid.png') {
-                    setState(() {
-                      imageForI = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForI == 'img/solid.png') {
-                    setState(() {
-                      imageForI = 'img/0.png';
-                      isItO = false;
-                    },);
-                  }
-                  whoWon();
-                },
                 child: Container(
                   height: MediaQuery.sizeOf(context).width / 4,
                   width: MediaQuery.sizeOf(context).width / 4,
@@ -715,6 +1792,27 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
                       image: DecorationImage(
                           image: AssetImage(imageForI), fit: BoxFit.cover)),
                 ),
+                onTap: () {
+                  if (imageForI == 'img/solid.png') {
+                    setState(
+                      () {
+                        imageForI = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
+                  }
+                  whoWon();
+                },
               ),
               SizedBox(
                 width: 10,
@@ -726,15 +1824,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForII == 'img/solid.png') {
-                    setState(() {
-                      imageForII = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForII == 'img/solid.png') {
-                    setState(() {
-                      imageForII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForII = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -757,15 +1862,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForIII == 'img/solid.png') {
-                    setState(() {
-                      imageForIII = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForIII == 'img/solid.png') {
-                    setState(() {
-                      imageForIII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForIII = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -793,15 +1905,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForIV == 'img/solid.png') {
-                    setState(() {
-                      imageForIV = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForIV == 'img/solid.png') {
-                    setState(() {
-                      imageForIV = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForIV = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -824,15 +1943,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForV == 'img/solid.png') {
-                    setState(() {
-                      imageForV = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForV == 'img/solid.png') {
-                    setState(() {
-                      imageForV = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForV = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -855,15 +1981,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForVI == 'img/solid.png') {
-                    setState(() {
-                      imageForVI = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForVI == 'img/solid.png') {
-                    setState(() {
-                      imageForVI = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForVI = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -891,15 +2024,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForVII == 'img/solid.png') {
-                    setState(() {
-                      imageForVII = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForVII == 'img/solid.png') {
-                    setState(() {
-                      imageForVII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForVII = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -922,15 +2062,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForVIII == 'img/solid.png') {
-                    setState(() {
-                      imageForVIII = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForVIII == 'img/solid.png') {
-                    setState(() {
-                      imageForVIII = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForVIII = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -953,15 +2100,22 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
               InkWell(
                 onTap: () {
                   if (isItO == false && imageForIX == 'img/solid.png') {
-                    setState(() {
-                      imageForIX = 'img/x.png';
-                      isItO = true;
-                    },);
-                  } else if (imageForIX == 'img/solid.png') {
-                    setState(() {
-                      imageForIX = 'img/0.png';
-                      isItO = false;
-                    },);
+                    setState(
+                      () {
+                        imageForIX = 'img/x.png';
+                        miniMax(
+                            turn: 1,
+                            imageI: imageForI,
+                            imageII: imageForII,
+                            imageIII: imageForIII,
+                            imageIV: imageForIV,
+                            imageV: imageForV,
+                            imageVI: imageForVI,
+                            imageVII: imageForVII,
+                            imageVIII: imageForVIII,
+                            imageIX: imageForIX);
+                      },
+                    );
                   }
                   whoWon();
                 },
@@ -984,14 +2138,18 @@ class _PlayerVsAIState extends State<PlayerVsAI> {
             clean();
           });
         },
-        child: const Icon(Icons.restart_alt_rounded,),
+        child: const Icon(
+          Icons.restart_alt_rounded,
+        ),
       ),
     );
   }
+
   @override
   void deactivate() {
     super.deactivate();
   }
+
   @override
   void dispose() {
     super.dispose();
